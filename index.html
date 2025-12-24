@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dunk | 專業資歷與證照組合</title>
+    <meta name="description" content="Dunk 的專業履歷：涵蓋金融、資訊安全、AI數據分析及多項專利發明的跨領域專家。">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&amp;family=Playfair+Display:wght@700&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#9A0036',
+                            darkRed: '#700025',
+                            pink: '#EEBAC0',
+                            purple: '#941C61',
+                            gold: '#D4AF37',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- ECharts -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+
+    <!-- Project styles -->
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body
+    class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800"
+        id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div
+                        class="w-8 h-8 rounded bg-brand-red flex items-center justify-center text-white font-serif font-bold text-lg">
+                        L</div>
+                    <span class="font-bold text-xl tracking-tight text-gray-900 dark:text-white">Dunk <span
+                            class="text-sm font-normal text-brand-purple hidden sm:inline-block">| Professional
+                            Portfolio</span></span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#overview"
+                        class="text-gray-600 dark:text-gray-300 hover:text-brand-red dark:hover:text-brand-pink transition-colors text-sm font-medium">總覽</a>
+                    <a href="#ai-tech"
+                        class="text-gray-600 dark:text-gray-300 hover:text-brand-red dark:hover:text-brand-pink transition-colors text-sm font-medium">AI
+                        &amp; 數據</a>
+                    <a href="#finance"
+                        class="text-gray-600 dark:text-gray-300 hover:text-brand-red dark:hover:text-brand-pink transition-colors text-sm font-medium">金融專業</a>
+                    <a href="#patents"
+                        class="text-gray-600 dark:text-gray-300 hover:text-brand-red dark:hover:text-brand-pink transition-colors text-sm font-medium">專利發明</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button id="theme-toggle"
+                        class="p-2 rounded-full text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800 transition-colors focus:outline-none ring-2 ring-transparent focus:ring-brand-red/50">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                    <a href="mailto:killysss123@gmail.com"
+                        class="hidden sm:inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-brand-red hover:bg-brand-darkRed shadow-sm hover:shadow-md transition-all">
+                        聯絡我
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="overview" class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden scroll-mt-20">
+        <!-- Abstract Background -->
+        <div class="absolute inset-0 z-0">
+            <div
+                class="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-black">
+            </div>
+            <!-- Decorative SVG Pattern -->
+            <svg class="absolute top-0 right-0 w-1/2 h-full opacity-5 dark:opacity-10 pointer-events-none text-brand-red"
+                viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0 0 L100 0 L100 100 Z" fill="currentColor" style="pointer-events: none;"></path>
+            </svg>
+            <div
+                class="absolute -bottom-24 -left-24 w-96 h-96 bg-brand-pink/20 rounded-full blur-3xl filter mix-blend-multiply dark:mix-blend-overlay">
+            </div>
+            <div
+                class="absolute top-0 right-0 w-96 h-96 bg-brand-purple/10 rounded-full blur-3xl filter mix-blend-multiply dark:mix-blend-overlay">
+            </div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="space-y-8 animate-fade-in-up">
+                    <div
+                        class="inline-flex items-center px-3 py-1 rounded-full border border-brand-red/30 bg-brand-red/5 text-brand-red text-xs font-semibold uppercase tracking-wide">
+                        <span class="w-2 h-2 rounded-full bg-brand-red mr-2 animate-pulse"></span>
+                        跨領域創新者
+                    </div>
+                    <h1
+                        class="text-4xl lg:text-6xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight">
+                        <span class="block">金融與科技的</span>
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-brand-purple">完美融合</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl leading-relaxed">
+                        我是 Dunk。<br>
+                        從深耕傳統金融與稽核，到掌握AI應用與數據分析，我致力於運用技術驅動金融服務創新。擁有多項發明專利與國際級認證，是您在數位轉型浪潮中最值得信賴的專業夥伴。
+                    </p>
+
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <div class="flex flex-col">
+                            <span class="text-3xl font-bold text-brand-red">40+</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">專業證照</span>
+                        </div>
+                        <div class="w-px h-12 bg-gray-200 dark:bg-gray-700 mx-4"></div>
+                        <div class="flex flex-col">
+                            <span class="text-3xl font-bold text-brand-red">9</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">發明專利</span>
+                        </div>
+                        <div class="w-px h-12 bg-gray-200 dark:bg-gray-700 mx-4"></div>
+                        <div class="flex flex-col">
+                            <span class="text-3xl font-bold text-brand-red">15+</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">年資歷</span>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 pt-4">
+                        <a href="#ai-tech"
+                            class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-brand-red hover:bg-brand-darkRed shadow-lg hover:shadow-xl transition-all duration-300">
+                            查看最新 AI 認證
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#patents"
+                            class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 dark:border-gray-600 text-base font-medium rounded-lg text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-300">
+                            瀏覽專利發明
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Visual/Chart Area -->
+                <div class="relative lg:h-[500px] w-full flex items-center justify-center">
+                    <!-- ECharts Radar Container -->
+                    <div id="skillsChart" class="w-full h-[400px] lg:h-[500px]"></div>
+
+                </div>
+                <!-- Decorative floating icons -->
+                <div class="absolute top-10 right-10 p-3 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 animate-bounce"
+                    style="animation-duration: 3s;">
+                    <i class="fab fa-python text-3xl text-blue-500"></i>
+                </div>
+                <div class="absolute bottom-20 left-10 p-3 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 animate-bounce"
+                    style="animation-duration: 4s; animation-delay: 1s;">
+                    <i class="fas fa-shield-alt text-3xl text-brand-red"></i>
+                </div>
+                <div class="absolute top-1/2 left-0 p-3 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 animate-bounce"
+                    style="animation-duration: 3.5s; animation-delay: 0.5s;">
+                    <i class="fas fa-chart-pie text-3xl text-brand-gold"></i>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- AI & Tech Section (The "New") -->
+    <section id="ai-tech" class="py-20 bg-white dark:bg-gray-800 relative scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-brand-purple font-semibold tracking-wider uppercase text-sm">Future Ready</span>
+                <h2 class="mt-2 text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">AI 人工智慧與數據分析</h2>
+                <p class="mt-4 text-xl text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
+                    擁抱生成式 AI 浪潮，取得 Google、Anthropic 與經濟部 iPAS 等多項前沿技術認證。
+                </p>
+            </div>
+
+            <!-- Featured AI Certs -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Card 1: Google Gemini -->
+                <div
+                    class="group relative bg-gray-50 dark:bg-gray-900 rounded-2xl p-6 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 bg-gradient-to-l from-blue-500/20 to-transparent w-32 h-32 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110">
+                    </div>
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                            <i class="fab fa-google text-2xl text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 dark:text-white">Gemini Certified</h3>
+                            <p class="text-xs text-gray-500">Google for Education</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-2 mb-4">
+                        <li class="flex items-center text-sm text-gray-600 dark:text-gray-300">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> Educator Level
+                        </li>
+                        <li class="flex items-center text-sm text-gray-600 dark:text-gray-300">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> Faculty Level
+                        </li>
+                        <li class="flex items-center text-sm text-gray-600 dark:text-gray-300">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i> AI 實戰認證
+                        </li>
+                    </ul>
+                    <div class="pt-4 border-t border-gray-200 dark:border-gray-700">
+                        <span class="text-xs font-mono text-gray-400">2025 取得 • 有效期至 2028</span>
+                    </div>
+                </div>
+
+                <!-- Card 2: Anthropic Claude -->
+                <div
+                    class="group relative bg-gray-50 dark:bg-gray-900 rounded-2xl p-6 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 bg-gradient-to-l from-orange-500/20 to-transparent w-32 h-32 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110">
+                    </div>
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                            <i class="fas fa-brain text-2xl text-orange-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 dark:text-white">Anthropic Claude</h3>
+                            <p class="text-xs text-gray-500">API &amp; Engineering</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span
+                            class="px-2 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 text-xs rounded">Prompt
+                            Engineering</span>
+                        <span
+                            class="px-2 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 text-xs rounded">API
+                            Integration</span>
+                        <span
+                            class="px-2 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 text-xs rounded">Model
+                            Context Protocol</span>
+                    </div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">涵蓋 Google Vertex AI, Amazon Bedrock 整合實戰。
+                    </p>
+                    <div class="pt-4 border-t border-gray-200 dark:border-gray-700">
+                        <span class="text-xs font-mono text-gray-400">2025/12 取得</span>
+                    </div>
+                </div>
+
+                <!-- Card 3: Economic Ministry iPAS -->
+                <div
+                    class="group relative bg-gray-50 dark:bg-gray-900 rounded-2xl p-6 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 bg-gradient-to-l from-brand-red/20 to-transparent w-32 h-32 rounded-bl-full -mr-8 -mt-8 transition-transform group-hover:scale-110">
+                    </div>
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                            <i class="fas fa-certificate text-2xl text-brand-red"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 dark:text-white">iPAS AI 應用規劃師</h3>
+                            <p class="text-xs text-gray-500">經濟部產業人才能力鑑定</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-2 mb-4">
+                        <li class="flex items-center text-sm text-gray-600 dark:text-gray-300">
+                            <span class="w-2 h-2 rounded-full bg-brand-red mr-2"></span> 機器學習 - 中級
+                        </li>
+                        <li class="flex items-center text-sm text-gray-600 dark:text-gray-300">
+                            <span class="w-2 h-2 rounded-full bg-brand-red mr-2"></span> 數據分析 - 中級
+                        </li>
+                        <li class="flex items-center text-sm text-gray-600 dark:text-gray-300">
+                            <span class="w-2 h-2 rounded-full bg-gray-400 mr-2"></span> 初級能力鑑定
+                        </li>
+                    </ul>
+                    <div class="pt-4 border-t border-gray-200 dark:border-gray-700">
+                        <span class="text-xs font-mono text-gray-400">2025 取得 • 國家級認證</span>
+                    </div>
+                </div>
+
+                <!-- Card 4: Data Analysis Tools -->
+                <div
+                    class="group relative bg-gray-50 dark:bg-gray-900 rounded-2xl p-6 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden lg:col-span-3">
+                    <div class="flex items-center gap-3 mb-6">
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white">數據分析與程式開發工具</h3>
+                        <div class="h-px flex-grow bg-gray-200 dark:bg-gray-700"></div>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div
+                            class="flex flex-col items-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <i class="fas fa-chart-bar text-3xl text-yellow-500 mb-2"></i>
+                            <span class="font-semibold text-gray-800 dark:text-gray-200">Power BI</span>
+                            <span class="text-xs text-gray-500">Desktop 數據分析實戰</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <i class="fab fa-python text-3xl text-blue-500 mb-2"></i>
+                            <span class="font-semibold text-gray-800 dark:text-gray-200">Python</span>
+                            <span class="text-xs text-gray-500">Pandas, Numpy, Matplotlib</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <i class="fas fa-table text-3xl text-blue-800 mb-2"></i>
+                            <span class="font-semibold text-gray-800 dark:text-gray-200">Tableau</span>
+                            <span class="text-xs text-gray-500">資料視覺化分析</span>
+                        </div>
+                        <div
+                            class="flex flex-col items-center p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                            <i class="fas fa-database text-3xl text-green-600 mb-2"></i>
+                            <span class="font-semibold text-gray-800 dark:text-gray-200">Big Data</span>
+                            <span class="text-xs text-gray-500">巨量資料分析師 (經濟部)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Finance & Management Section -->
+    <section id="finance" class="py-20 bg-gray-50 dark:bg-gray-900 relative scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <span class="text-brand-red font-semibold tracking-wider uppercase text-sm">Professional Core</span>
+                    <h2 class="mt-2 text-3xl font-bold text-gray-900 dark:text-white">金融專業與管理資歷</h2>
+                    <p class="mt-2 text-gray-600 dark:text-gray-400">紮實的銀行、保險與證券領域專業認證。</p>
+                </div>
+
+                <!-- Filter Tabs (Visual only for this demo) -->
+                <div class="mt-4 md:mt-0 flex space-x-2 overflow-x-auto no-scrollbar pb-2">
+                    <span
+                        class="px-4 py-2 rounded-full bg-brand-red text-white text-sm cursor-pointer shadow-md">全部</span>
+                    <span
+                        class="px-4 py-2 rounded-full bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700 text-sm cursor-pointer hover:bg-gray-100">銀行/信託</span>
+                    <span
+                        class="px-4 py-2 rounded-full bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700 text-sm cursor-pointer hover:bg-gray-100">保險/理財</span>
+                    <span
+                        class="px-4 py-2 rounded-full bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700 text-sm cursor-pointer hover:bg-gray-100">資安/稽核</span>
+                </div>
+            </div>
+
+            <!-- Masonry-like Grid -->
+            <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+
+                <!-- ISO Security -->
+                <div
+                    class="break-inside-avoid bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border-l-4 border-brand-red card-hover">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-gray-900 dark:text-white">ISO/IEC 27001:2005</h4>
+                        <i class="fas fa-lock text-brand-red/50"></i>
+                    </div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">主導稽核員培訓 (Lead Auditor)</p>
+                    <p class="text-xs text-gray-400">BSI Training / IRCA Certified</p>
+                </div>
+
+                <!-- Banking Internal Control -->
+                <div
+                    class="break-inside-avoid bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 card-hover">
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-1">銀行內部控制與內部稽核</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">台灣金融研訓院</p>
+                    <span
+                        class="inline-block px-2 py-1 bg-gray-100 dark:bg-gray-700 text-xs rounded text-gray-600 dark:text-gray-300">合格證明書</span>
+                </div>
+
+                <!-- Trust Business -->
+                <div
+                    class="break-inside-avoid bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 card-hover">
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-1">信託業務專業測驗</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">信託公會</p>
+                    <span
+                        class="inline-block px-2 py-1 bg-gray-100 dark:bg-gray-700 text-xs rounded text-gray-600 dark:text-gray-300">合格</span>
+                </div>
+
+                <!-- Insurance -->
+                <div
+                    class="break-inside-avoid bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 card-hover">
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-1">保險業務資格</h4>
+                    <ul class="mt-2 space-y-2">
+                        <li class="flex items-center text-sm text-gray-600 dark:text-gray-400">
+                            <i class="fas fa-check text-brand-pink mr-2"></i> 人身保險業務員
+                        </li>
+                        <li class="flex items-center text-sm text-gray-600 dark:text-gray-400">
+                            <i class="fas fa-check text-brand-pink mr-2"></i> 財產保險業務員
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- AML -->
+                <div
+                    class="break-inside-avoid bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 card-hover">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-gray-900 dark:text-white">防制洗錢與打擊資恐</h4>
+                        <i class="fas fa-file-contract text-brand-purple/50"></i>
+                    </div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">專業人員測驗合格</p>
+                    <p class="text-xs text-gray-400">台灣金融研訓院</p>
+                </div>
+
+                <!-- Risk Management -->
+                <div
+                    class="break-inside-avoid bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 card-hover">
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-1">風險管理基本能力</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">有效期至 2027 年</p>
+                    <p class="text-xs text-gray-400">台灣金融研訓院</p>
+                </div>
+
+                <!-- ESG/Sustainability -->
+                <div
+                    class="break-inside-avoid bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border-l-4 border-green-500 card-hover">
+                    <div class="flex justify-between items-start mb-2">
+                        <h4 class="font-bold text-gray-900 dark:text-white">永續發展基礎能力</h4>
+                        <i class="fas fa-leaf text-green-500/50"></i>
+                    </div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">保險事業發展中心</p>
+                    <p class="text-xs text-gray-400">2024 取得</p>
+                </div>
+
+                <!-- Credit -->
+                <div
+                    class="break-inside-avoid bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 card-hover">
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-1">初階授信人員</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">專業能力測驗合格</p>
+                    <p class="text-xs text-gray-400">2024 取得</p>
+                </div>
+
+                <!-- Derivatives -->
+                <div
+                    class="break-inside-avoid bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 card-hover">
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-1">衍生性金融商品</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">銷售人員資格測驗</p>
+                </div>
+
+                <!-- English -->
+                <div
+                    class="break-inside-avoid bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 card-hover">
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-1">BULATS / LTTC</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">商務英語 (Reading &amp; Listening)</p>
+                    <span
+                        class="inline-block px-2 py-1 bg-blue-100 dark:bg-blue-900 text-xs rounded text-blue-700 dark:text-blue-300">CEFR
+                        Level B1</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Patents Section -->
+    <section id="patents" class="py-20 bg-white dark:bg-gray-800 scroll-mt-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white">專利與創新發明</h2>
+                <p class="mt-4 text-gray-500 dark:text-gray-400">致力於銀行系統流程優化與自動化，擁有多項中華民國新型專利。</p>
+            </div>
+
+            <div
+                class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
+
+                <!-- Patent Item 1 -->
+                <div
+                    class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div
+                        class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-slate-300 group-[.is-active]:bg-brand-red text-slate-500 group-[.is-active]:text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div
+                        class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white dark:bg-gray-900 p-4 rounded-xl border border-slate-200 dark:border-gray-700 shadow-sm">
+                        <div class="flex items-center justify-between space-x-2 mb-1">
+                            <div class="font-bold text-slate-900 dark:text-white">基金相關系統專利群</div>
+                            <time class="font-caveat font-medium text-brand-red">2022-2024</time>
+                        </div>
+                        <div class="text-slate-500 dark:text-slate-400 text-sm">
+                            <ul class="list-disc list-inside space-y-1 mt-2">
+                                <li>基金配權息自動彙整系統 (M655646)</li>
+                                <li>基金贖回暨配息匯入款比對系統 (M655664)</li>
+                                <li>基金權益數同步系統 (M632005)</li>
+                                <li>基金分配業務處理系統 (M631292)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Patent Item 2 -->
+                <div
+                    class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div
+                        class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-brand-red text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <div
+                        class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white dark:bg-gray-900 p-4 rounded-xl border border-slate-200 dark:border-gray-700 shadow-sm">
+                        <div class="flex items-center justify-between space-x-2 mb-1">
+                            <div class="font-bold text-slate-900 dark:text-white">管理與對帳系統</div>
+                            <time class="font-caveat font-medium text-brand-red">2019-2024</time>
+                        </div>
+                        <div class="text-slate-500 dark:text-slate-400 text-sm">
+                            <ul class="list-disc list-inside space-y-1 mt-2">
+                                <li>智能化客戶管理系統 (M655250)</li>
+                                <li>財報對帳管理系統 (M633443)</li>
+                                <li>會計資訊發送提醒系統 (M585951)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Patent Item 3 -->
+                <div
+                    class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                    <div
+                        class="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-brand-red text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div
+                        class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white dark:bg-gray-900 p-4 rounded-xl border border-slate-200 dark:border-gray-700 shadow-sm">
+                        <div class="flex items-center justify-between space-x-2 mb-1">
+                            <div class="font-bold text-slate-900 dark:text-white">庫存與餘額比對</div>
+                            <time class="font-caveat font-medium text-brand-red">2019</time>
+                        </div>
+                        <div class="text-slate-500 dark:text-slate-400 text-sm">
+                            <ul class="list-disc list-inside space-y-1 mt-2">
+                                <li>基金保管股票庫存比對系統 (M585379)</li>
+                                <li>基金保管存款餘額比對系統 (M585394)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Dunk</h3>
+                    <p class="text-gray-400 text-sm">金融科技專家 • 專利發明人 • AI應用規劃師</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-300">專業領域</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-400">資訊安全</span>
+                        <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-400">數據分析</span>
+                        <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-400">金融稽核</span>
+                        <span class="px-2 py-1 bg-gray-800 rounded text-xs text-gray-400">專利佈局</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-300">聯絡資訊</h4>
+                    <div class="flex space-x-4">
+                        <a href="mailto:killysss123@gmail.com"
+                            class="text-gray-400 hover:text-brand-red transition-colors"><i
+                                class="fas fa-envelope text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                <p>© 2025 Dunk. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/main.js" defer></script>
+
+</body>
+
+</html>
