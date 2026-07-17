@@ -1,102 +1,108 @@
-# Dunk 專業資歷與證照組合
+# Dunk 金融科技與 AI 專業履歷
 
-專業履歷網站，展示金融、資訊安全、AI 數據分析及專利發明等跨領域專業能力。
+這是一個以個人品牌為核心的專業履歷網站，展示 Dunk 在金融科技、生成式 AI、數據分析、流程自動化、金融合規與專利發明上的跨域能力。
 
-## 專案結構
+網站採用 BuJo 手帳風格設計，以白底點陣紙感、手繪邊框、粉彩重點標記與筆記式排版，呈現專業但不制式的個人履歷形象。
 
+## 品牌定位
+
+Dunk 的專業背景橫跨傳統金融與前沿科技，核心價值在於把金融業務知識、法規合規經驗與 AI 自動化工具整合起來，協助流程更有效率、更可追蹤，也更容易被落地執行。
+
+主要專長包含：
+
+- 生成式 AI 與 LLM 應用
+- Python 與數據分析
+- RPA、n8n 與流程自動化
+- 金融業務、信託、法遵與內控稽核
+- 金融科技系統發明與專利布局
+
+## 核心亮點
+
+- **9 項金融科技相關專利**：聚焦基金保管、會計資訊、財報對帳、客戶管理與基金分配流程。
+- **30+ 跨域專業證照**：涵蓋 AI、資料分析、Python、資訊安全、金融業務、信託、法遵與投資理財。
+- **AI 與自動化實務能力**：包含生成式 AI、AI Agent、Claude、Gemini、AWS Generative AI、n8n 與 RPA 相關培訓。
+- **金融合規與作業流程經驗**：結合銀行實務、風險管理、防制洗錢、內控稽核與財富管理專業。
+
+## 網站內容
+
+### 關於我
+
+以 FinTech & AI Expert 為主軸，介紹 Dunk 在金融與科技之間的跨域角色，並以技能標籤呈現生成式 AI、Python、RPA 與金融合規等能力。
+
+### 專利發明
+
+整理金融科技相關專利，包含基金保管股票庫存比對、基金保管存款餘額比對、會計資訊提醒、基金分配業務處理、財報對帳、智能化客戶管理等系統。
+
+### 專業證照
+
+以互動篩選方式呈現證照，分為：
+
+- AI 科技與資料分析
+- 金融業務與合規
+- 全部證照總覽
+
+### 專業培訓
+
+用時間軸呈現持續學習歷程，包含：
+
+- 2025-2026：進階自動化與生成式 AI
+- 2023-2024：數據視覺化與智慧交易
+- 2010-2020：系統架構與資料庫基礎
+
+## 視覺風格
+
+本網站採用 Bullet Journal 風格，不走傳統履歷網站常見的商務卡片或深色科技風，而是透過筆記本式的視覺語言建立記憶點。
+
+設計元素包含：
+
+- 手繪感不規則邊框
+- 粉彩 mint 與 pink 高亮
+- 點陣紙背景
+- 便利貼式數字亮點
+- 手寫感標題字體
+- 證照卡片篩選互動
+
+## 技術架構
+
+目前專案是單檔靜態網站，主要內容、樣式與互動邏輯都集中在 `index.html`。
+
+```text
+myProfessionalPortfolio/
+├── index.html
+└── README.md
 ```
-my/
-├── index.html          # 主頁面
-├── assets/
-│   ├── main.js        # 互動邏輯（深淺模式、ECharts、導覽高亮）
-│   └── styles.css     # 自訂樣式
-└── README.md          # 說明文件
-```
 
-## 技術棧
+使用技術：
 
-- **Tailwind CSS** (CDN) - 實用優先的 CSS 框架
-- **ECharts** (v5.4.3) - 技能雷達圖視覺化
-- **Font Awesome** (v6.5.1) - 圖示庫
-- **Google Fonts** - Noto Sans TC / Playfair Display
+- **HTML5**：頁面結構與內容
+- **Tailwind CSS CDN**：版面與響應式樣式
+- **Google Fonts**：Kalam、Nunito
+- **Font Awesome CDN**：圖示
+- **Vanilla JavaScript**：證照分類篩選互動
 
-## 主要功能
+## 本地預覽
 
-### 🎨 深淺模式切換
-- 根據系統偏好自動初始化
-- 手動切換並持久化至 `localStorage`
-- 圖表主題同步切換
+可以直接用瀏覽器開啟 `index.html`。
 
-### 📊 技能雷達圖
-- 六維度能力分佈（金融專業、資訊安全、數據分析、AI 應用、系統開發、法規遵循）
-- 響應式設計，自動適應視窗大小
-- 深淺模式下不同配色
-
-### 🧭 導覽列互動
-- 固定頂部導覽，滾動時增加陰影
-- 錨點導航偏移 (`scroll-mt-20`) 避免被導覽列遮蓋
-- 自動高亮當前段落對應連結（IntersectionObserver）
-
-## 啟動方式
-
-### 方法 1：直接開啟
-雙擊 `index.html` 在瀏覽器中開啟。
-
-### 方法 2：本地伺服器（推薦）
-使用任何靜態伺服器，例如：
+也可以使用靜態伺服器預覽：
 
 ```bash
-# Python 3
 python -m http.server 8000
-
-# Node.js (http-server)
-npx http-server -p 8000
-
-# VS Code Live Server
-# 安裝 Live Server 擴充套件後，右鍵點擊 index.html → "Open with Live Server"
 ```
 
-然後在瀏覽器訪問 `http://localhost:8000`
+啟動後開啟：
 
-## 自訂調整
-
-### 修改技能雷達數值
-編輯 [assets/main.js](assets/main.js) 第 85 行附近：
-
-```javascript
-value: [95, 85, 90, 88, 80, 90],  // 調整各維度分數
+```text
+http://localhost:8000
 ```
 
-### 修改配色
-編輯 [index.html](index.html) 的 Tailwind 配置（第 20-35 行）：
+## 維護方式
 
-```javascript
-colors: {
-    brand: {
-        red: '#9A0036',     // 主題紅
-        darkRed: '#700025', // 深紅
-        pink: '#EEBAC0',    // 粉紅
-        purple: '#941C61',  // 紫
-        gold: '#D4AF37',    // 金
-    }
-}
-```
-
-### 修改導覽高亮靈敏度
-編輯 [assets/main.js](assets/main.js) 第 121-123 行的 `rootMargin`：
-
-```javascript
-rootMargin: '-20% 0px -70% 0px',  // 調整觸發範圍
-```
-
-## 瀏覽器支援
-
-- Chrome/Edge 90+
-- Firefox 88+
-- Safari 14+
-
-建議使用現代瀏覽器以獲得最佳體驗。
+- 更新個人介紹、專利、證照或培訓內容：編輯 `index.html` 對應區塊。
+- 調整主題色：修改 `tailwind.config` 內的 `theme` 色票。
+- 調整手帳風樣式：修改 `<style>` 區塊中的 `.bujo-box`、`.shadow-mint`、`.shadow-pink`、`.highlighter-*` 等樣式。
+- 調整證照篩選邏輯：修改檔案底部 `<script>` 中的 `data-filter` 與 `.cert-item` 分類。
 
 ## 授權
 
-© 2025 Dunk
+Dunk's Resume Journal © 2026
